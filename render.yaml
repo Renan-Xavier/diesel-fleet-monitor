@@ -1,0 +1,13 @@
+# ==============================================================================
+# Render Blueprint (Infrastructure as Code)
+# Permite realizar o deploy gratuito e automatizado com 1 clique no Render.com
+# ==============================================================================
+services:
+  - type: web
+    name: diesel-fleet-monitor
+    env: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    autoDeploy: true
